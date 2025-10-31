@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>This or that?</title>
+        <style>
+            body{background-color:  plum;
+            font-family: 'Poppins', sans-serif; text-align: center;}
+            h1{ text-align: center;
+            font-size: 30;color:  #3f3351;}
+            button {
+             background-color: rgb(131, 97, 97);
+             color: beige;
+             height:50px; 
+             width: 100px; 
+             text-align: center;
+            font-size: 20px;
+             font-weight: bolder;}
+             button:hover{background-color: #3f3351;}
+        </style>
+    </head>
+    <body>
+<h1>How's your mood today?</h1>
+<button onclick="checkMode()">Tell me</button>
+<p id="message"></p>
+<script>
+    function checkMode(){
+        var mood= prompt("How are you feeling today?(Happy/Sad/Angry)");
+        if (mood === "Happy") {document.getElementById("message").textContent=
+            "That's awesome! Keep smiling."}
+       else if (mood === "Sad") {document.getElementById("message").textContent=
+            "It's okay to feel sad. Better days are coming!"
+        }
+        else if (mood === "Angry") {document.getElementById("message").textContent=
+            "Take a deep breathe. Let your anger fuel and guide you to a better path"
+        }
+    }
+</script>
+    </body>
+</html>
